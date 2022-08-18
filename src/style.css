@@ -1,0 +1,183 @@
+/* stylelint-disable max-empty-lines */
+
+
+/* stylelint-disable no-descending-specificity */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  font-style: normal;
+  color: white;
+  background-color: #f6f6f6;
+}
+
+ul li {
+  list-style: none;
+  background-color: #fff;
+
+  /* width: 100%; */
+  max-width: 500px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.to-do-list {
+  width: 100%;
+  padding: 20px 5%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  float: left;
+  box-sizing: border-box;
+}
+
+.selected-list {
+  position: relative;
+  min-width: 0;
+  text-align: center;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  top: 0;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 5%;
+}
+
+#stats {
+  position: relative;
+  padding: 0 92px 0 46px;
+  height: 50px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+}
+
+#stats h2 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 0;
+  line-height: 20px;
+  text-align: initial;
+  width: 80%;
+}
+
+hr {
+  color: #f6f6f6;
+}
+
+.refresh {
+  width: 20%;
+  margin-left: 82%;
+}
+
+.refresh .refreshIcon {
+  color: #545862;
+  padding: 20px 0;
+  width: 20%;
+  align-items: flex-end;
+}
+
+.list {
+  background-color: #fff;
+}
+
+#new-item-form {
+  width: 210%;
+  display: flex;
+}
+
+#new-item-form input {
+  height: 60px;
+}
+
+#new-item-form #new-item {
+  padding: 0 16px;
+  width: 80%;
+  border-bottom-style: none;
+  border-color: #fff;
+  opacity: 0.5;
+  align-items: initial;
+}
+
+#new-item-form #submit-new-item {
+  cursor: pointer;
+  background-color: #fff;
+  border-block-color: #f6f6f6;
+  border-inline-start-color: #fff;
+  border-inline-end-color: #fff;
+  padding: 0 5%;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 3;
+  font-style: italic;
+  padding-left: 4%;
+}
+
+#add-item li #submit-new-item::after {
+  width: 100%;
+}
+
+.clear-completed {
+  opacity: 0.5;
+  border-bottom-style: none;
+  border-color: #f6f6f6;
+  font-size: 20px;
+  padding: 16px 0;
+}
+
+
+/* dynamic page */
+
+#listToDo {
+  width: 1000px;
+}
+
+.toDo {
+  display: flex;
+  max-width: 1000px;
+  height: 50px;
+}
+
+.toDo .completed {
+  width: 10%;
+  background-color: #fff;
+  border-style: none;
+  font-size: 50px;
+  color: hsl(0deg 5% 74%);
+}
+
+.toDo .discription {
+  width: 98%;
+  color: #000;
+  padding-top: 2%;
+  font-size: 20px;
+  text-align: initial;
+  padding-left: 5px;
+}
+
+.toDo .dots {
+  width: 20%;
+  color: hsl(0deg 5% 74%);
+  font-size: 40px;
+  text-align: end;
+  padding-right: 10%;
+  font-weight: 900;
+}
