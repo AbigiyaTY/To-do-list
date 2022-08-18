@@ -21,7 +21,7 @@ This is "To-do list" website that helps you to organize your day.
 
 - GitHub: [@githubhandle](https://github.com/AbigiyaTY)
 - Twitter: [@twitterhandle](https://twitter.com/AbigiyaTY)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abigiya-tadesse-6a0052234)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/abigiya-tadesse-6a0052234)
 
 ## 🤝 Contributing
 
