@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TO DO LIST</title>
     <!-- Link to the Font-Awesome Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
     <!-- CSS only -->
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -14,33 +13,15 @@
 
 <body>
     <section>
-        <div class="to-do-list" id="list">
-            <div class="selected-list">
-                <div id="stats">
-                    <h2>Today's To do</h2>
-                    <div class="refresh">
-                        <i class="refreshIcon fa fa-refresh"></i>
-                    </div>
-                </div>
-
-                <div class="list">
-                    <ul id="add-item" class="items">
-                        <li>
-                            <form id="new-item-form">
-                                <input id="new-item" placeholder="Add to your list..." type="text" />
-                                <input id="submit-new-item" type="submit" tabindex="-1" class="icon-return" value="+" />
-                            </form>
-                        </li>
-                    </ul>
-                    <hr />
-                    <div id="listToDo"></div>
-                </div>
-
-                <button type="button" class="clear-completed">
-            Clear all completed
-          </button>
-            </div>
+        <div class="header">
+            <h2>Today's To do</h2>
+            <i class="fa fa-refresh"></i>
         </div>
+        <form>
+            <input type="text" placeholder="Add to your list..." />
+            <div class="listToDo"></div>
+            <button type="button">Clear all completed</button>
+        </form>
     </section>
     <script type="text/javascript" src="index.js"></script>
 </body>
