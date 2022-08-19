@@ -2,6 +2,8 @@ import './style.css';
 
 const textInput = document.querySelector('input');
 const listToDo = document.querySelector('.listToDo');
+const clearAllbtn = document.querySelector('button');
+
 class MyObject {
   constructor(description, completed, index) {
     this.description = description;
@@ -138,3 +140,19 @@ const getFromLocal = (e) => {
   localStorage.setItem('list', JSON.stringify(myArray));
 };
 window.addEventListener('load', getFromLocal);
+
+const clearAll = () => {
+  const localData = JSON.parse(localStorage.getItem('list'));
+  const toDoContainer = document.querySelectorAll('.toDoContainer');
+  toDoContainer.forEach((i) => {
+    if (i.classList.contains('checkedContainer')) {
+      removeToDo(i);
+    }
+  });
+  const data = Array.from(localData).filter((i) => i.completed === false);
+  data.forEach((el, index) => {
+    el.index = index + 1;
+  });
+  localStorage.setItem('list', JSON.stringify(data));
+};
+clearAllbtn.addEventListener('click', clearAll);
