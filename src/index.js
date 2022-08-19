@@ -9,7 +9,6 @@ class MyObject {
     this.index = index;
   }
 }
-// myArray for local storage
 const myArray = [];
 const updateLocal = () => {
   const localData = JSON.parse(localStorage.getItem('list'));
@@ -25,13 +24,11 @@ const updateLocal = () => {
 };
 const removeToDo = (toDo) => {
   listToDo.removeChild(toDo);
-  let count = 0;
   const localData = JSON.parse(localStorage.getItem('list'));
   const data = Array.from(localData).filter((i) => i.completed === false);
-  data.map = (i) => {
-    count += count;
-    i.index = count;
-  };
+  data.forEach((el, index) => {
+    el.index = index + 1;
+  });
   localStorage.setItem('list', JSON.stringify(data));
 };
 const editToDo = (toDoContainer, toDo) => {
@@ -55,7 +52,6 @@ const editToDo = (toDoContainer, toDo) => {
       toDo.textContent = editInput.value;
     }
   });
-  // remove or delete list
   const removeIcons = document.querySelectorAll('.fa-trash');
   removeIcons.forEach((i) => {
     i.addEventListener('click', () => {
@@ -64,7 +60,6 @@ const editToDo = (toDoContainer, toDo) => {
   });
 };
 
-// general stracter for adding todo list
 const addTodo = (toDoValue) => {
   const toDoContainer = document.createElement('div');
   toDoContainer.className = 'toDoContainer';
@@ -75,7 +70,6 @@ const addTodo = (toDoValue) => {
 <i class="fa fa-trash"></i>
 `;
   listToDo.appendChild(toDoContainer);
-  // the trash and 3 dots display block or none
   const checkBox = document.querySelectorAll('.checkbox');
   checkBox.forEach((i) => {
     i.addEventListener('click', () => {
@@ -86,11 +80,9 @@ const addTodo = (toDoValue) => {
       updateLocal();
     });
   });
-  // local storage
   const object = new MyObject(toDoValue, false, checkBox.length);
   myArray.push(object);
   localStorage.setItem('list', JSON.stringify(myArray));
-  // edit listener
   const editIcons = document.querySelectorAll('.fa-ellipsis-v');
   editIcons.forEach((i) => {
     i.addEventListener('click', () => {
@@ -98,22 +90,17 @@ const addTodo = (toDoValue) => {
     });
   });
 };
-// edit (writing edit function)
 
-// adding to do list
 textInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && textInput.value) {
     addTodo(textInput.value);
     textInput.value = null;
   }
 });
-/* eslint-disable  array-callback-return */
-
-// showing data in the browser by bring it from local storage
 const getFromLocal = (e) => {
   e.preventDefault();
   const data = JSON.parse(localStorage.getItem('list'));
-  data.map((i) => {
+  data.forEach((i) => {
     myArray.push(i);
     const toDoContainer = document.createElement('div');
     toDoContainer.className = 'toDoContainer';
