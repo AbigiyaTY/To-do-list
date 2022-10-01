@@ -14,7 +14,7 @@ This is "To-do list" website that helps you to organize your day.
 
 ## Live Demo 
 
-[Live Demo Link](https://abigiyaty.github.io/to-do-list/dist/.)
+[Live Demo Link](https://abigiyaty.github.io/To-do-list//dist/.)
 
 
 👤 **Author**
