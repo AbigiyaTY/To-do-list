@@ -2,7 +2,8 @@
 # TO DO LIST
 
 ## Description the project.
-This is "To-do list" website that helps you to organize your day.
+> To-do List is an app that helps people organize their lives by allowing them to create a list of tasks that must be completed.
+Users can add new tasks to the list, remove and edit task descriptions, mark tasks as completed, and delete all completed tasks.
 
 ## Built With
 
