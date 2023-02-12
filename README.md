@@ -1,7 +1,8 @@
 
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # TO DO LIST
 
-## Description the project.
 > To-do List is an app that helps people organize their lives by allowing them to create a list of tasks that must be completed.
 Users can add new tasks to the list, remove and edit task descriptions, mark tasks as completed, and delete all completed tasks.
 
